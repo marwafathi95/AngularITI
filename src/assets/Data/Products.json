@@ -1,0 +1,66 @@
+[
+    {
+        "ID": 1,
+        "Name": "Product 1",
+        "Price": 90,
+        "imgpath": "assets/images/p1.png",
+        "Quantity": 2,
+        "Discount":0.1
+    },
+    {
+        "ID": 2,
+        "Name": "Product 2",
+        "Price": 105,
+        "imgpath": "assets/images/p2.png",
+        "Quantity": 2,
+        "Discount":0.15
+    },
+    {
+        "ID": 3,
+        "Name": "Product 3",
+        "Price": 103,
+        "imgpath": "assets/images/p3.png",
+        "Quantity": 3,
+        "Discount":0
+    },
+    {
+        "ID": 4,
+        "Name": "Product 4",
+        "Price": 104,
+        "imgpath": "assets/images/p4.png",
+        "Quantity": 4,
+        "Discount":0.1
+    },
+    {
+        "ID": 5,
+        "Name": "Product 5",
+        "Price": 106,
+        "imgpath": "assets/images/p5.png",
+        "Quantity": 5,
+        "Discount":0
+    },
+    {
+        "ID": 6,
+        "Name": "Product 6",
+        "Price": 110,
+        "imgpath": "assets/images/p6.png",
+        "Quantity": 6,
+        "Discount":0.15
+    },
+    {
+        "ID": 7,
+        "Name": "Product 7",
+        "Price": 107,
+        "imgpath": "assets/images/p7.png",
+        "Quantity": 7,
+        "Discount":0.1
+    },
+    {
+        "ID": 8,
+        "Name": "Product 8",
+        "Price": 108,
+        "imgpath": "assets/images/p8.png",
+        "Quantity": 8,
+        "Discount":0
+    }
+]

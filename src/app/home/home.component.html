@@ -1,0 +1,20 @@
+
+ <div>
+    <input type="text" [(ngModel)]="istrue">
+  
+</div>
+
+<br>
+    
+ <div>
+  <button class="btn btn-primary" (click)="comparetext()">show</button>  
+</div> 
+<div *ngIf="istrue;then thenBlock2; else elseBlock">
+</div>
+<ng-template #thenBlock2>
+    <div style="color:green ;font-weight: bold;">"hello from the true Div ”</div>
+    </ng-template>
+    <ng-template #elseBlock>
+        <div style="color: red;font-weight: bold;">“hello from false div ”</div>
+    </ng-template>
+<div class="d-flex flex-column min-vh-100" ></div>

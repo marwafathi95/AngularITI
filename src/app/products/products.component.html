@@ -1,0 +1,185 @@
+<!-- import { DiscountOffers } from 'app/SharedClassesAndTypes/Enums'; -->
+
+<!-- <h1 [title]="Storename">{{Storename}}</h1>
+<br />
+<img [src]="StoreLogo">
+<div *ngIf="Discount===enumobj.NoDiscount; then thenBlock;else elseBlock"></div>
+<ng-template #thenBlock>
+    <h3>
+        There is no discount
+    </h3>
+</ng-template>
+<ng-template #elseBlock>
+    <h3>We offer an explicit discount of {{actualdiscount}}%</h3>
+</ng-template>
+
+<select class="form-select form-select-lg mb-3">
+    <option *ngFor="let category of CategoryList" [value]="category.Name">{{category.Name}}</option>
+</select>
+<br><br><br> -->
+<!-- assignment 3 -->
+<!-- <h2>Products</h2> -->
+<!-- <table class="table table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Image</th>
+    </tr>
+    <tr *ngFor="let product of ProductList">
+        <td>{{product.ID}}</td>
+        <td>{{product.Name}}</td>
+        <td>{{product.Quantity}}</td>
+        <td>{{product.Price}}</td>
+        <td><img style="width:120px;height:100px;" [src]="product.imgpath"></td>
+    </tr>
+</table> -->
+<!-- <div>
+    <input type="text" [(ngModel)]="ClientName">
+    {{ClientName}}
+</div>
+<br>-->
+    
+<!-- <div>
+  <button class="btn btn-primary" (click)="switchIsPurchased()">show</button>  
+</div> 
+
+  <ng-container *ngIf="!IsPurchased">
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Image</th>
+        </tr>
+        <tr *ngFor="let product of ProductList">
+            <td>{{product.ID}}</td>
+            <td>{{product.Name}}</td>
+            <td>{{product.Quantity}}</td>
+            <td>{{product.Price}}</td>
+            <td><img style="width:120px;height:100px;" [src]="product.imgpath"></td>
+        </tr>
+    </table> 
+</ng-container>
+<ng-container *ngIf="IsPurchased">
+    <div class="table table-striped">
+        Thanks for purchasing from our Store {{ClientName}}
+    </div>
+</ng-container>
+<br> -->
+
+
+<!-- <div>
+    <button class="btn btn-primary" (click)="switchIsPurchased()">show</button>  
+  </div> 
+<div *ngIf="IsPurchased;then thenBlock2; else elseBlock2">
+</div>
+<ng-template #thenBlock2>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Image</th>
+        </tr>
+        <tr *ngFor="let product of ProductList">
+            <td>{{product.ID}}</td>
+            <td>{{product.Name}}</td>
+            <td>{{product.Quantity}}</td>
+            <td>{{product.Price}}</td>
+            <td><img style="width:120px;height:100px;" [src]="product.imgpath"></td>
+        </tr>
+    </table>
+</ng-template>
+<ng-template #elseBlock2>
+    <div class="table table-striped">
+        Thanks for purchasing from our Store {{ClientName}}
+    </div>
+</ng-template> -->
+
+
+
+
+<!-- assignment 4 -->
+<!-- <input type="text" [(ngModel)]="ClientName">
+<div>
+    {{ClientName}}
+</div> -->
+
+
+<!-- <h1 [title]="Storename">{{Storename|uppercase}}</h1>
+<h1 [title]="Discount">Discount is {{Discount|percent:'1.0'}}</h1>
+
+
+<div >
+    {{[1,2,3,4,5,2,3,1,5]|filter}}
+</div> -->
+
+
+
+
+<!-- <div>
+    <input type="text" [(ngModel)]="productId">
+    <button class="btn btn-primary" (click)="getProductById()">Show details</button> 
+</div>
+
+
+<div *ngIf="product!==undefined; then thenBlock;else elseBlock"></div>
+<ng-template #thenBlock>
+    <div>
+        <h2>{{product.Name}}</h2>
+        <div>
+            Price:{{product.Price}}<br>
+            Quantity:{{product.Quantity}}<br>
+            <img src={{product.imgpath}}>
+        </div>
+    </div>
+</ng-template>
+<ng-template #elseBlock>
+    <h3>There is no product with that Id</h3>
+</ng-template> -->
+
+<!-- ---------day 4------------------------------------- -->
+
+<!-- <div *ngFor="let product of ProductList">
+    {{product.ID}}
+    {{product.Name}}
+    {{product.Quantity}}
+    {{product.Price}}
+    <img style="width:120px;height:100px;" [src]="product.imgpath">
+</div> -->
+<!-- <table class="table table-striped">
+    <tr class="bg-secondary">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Image</th>
+    </tr>
+    <tr *ngFor="let product of ProductList">
+        <td>{{product.ID}}</td>
+        <td>{{product.Name}}</td>
+        <td>{{product.Quantity}}</td>
+        <td>{{product.Price}}</td>
+        <td><img style="width:120px;height:100px;" [src]="product.imgpath"></td>
+    </tr>
+</table> -->
+<button class="btn btn-outline-success mx-10" type="submit" (click)="showProductsWithDiscount()">products with discount</button>
+<button class="btn btn-outline-success" type="submit" (click)="showProductsWithNoDiscount()">productwithoutdiscount</button>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let product of ProductList" class="card" style="width: 18rem;margin: 20px;">
+            <div class="card-body">
+                <img style="width:120px;height:100px;" [src]="product.imgpath">
+                <h4 class="card-title">{{product.ID}}</h4>
+                <h4 class="card-text">Name:{{product.Name}}</h4>
+                <p class="card-text">Quantity :  {{product.Quantity}}</p>
+                <p class="card-text"> Price : {{product.Price}}</p>
+                <p class="card-text"> Discount : {{product.Discount*100}}%</p>
+            </div>
+        </div>
+    </div>
+</div>

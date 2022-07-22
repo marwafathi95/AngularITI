@@ -1,0 +1,44 @@
+<div class="container">
+<form  #userform="ngForm" class="form-group">
+<div>
+<label for="">User Name</label>
+<input type="text" name="txtname" pattern="" required [class.is-invalid]="username.invalid && username.touched" [(ngModel)]="user.username" #username="ngModel" class="form-control" >
+<small class="text-danger" *ngIf="username.invalid && username.touched"> name is required</small>
+</div>
+
+    <div>
+        <label for="">E-mail</label>
+        <input type="email" name="txtmail" #mail="ngModel" [(ngModel)]="user.mail" pattern="\w+@\w+.(com.eg|net.eg|edu.eg|org.eg|.eg)$" class="form-control" required [class.is-invalid]="mail.invalid && mail.touched">
+        <small class="text-danger" *ngIf="mail.invalid && mail.touched">Email must have @ and .com</small>
+        <div>
+            <label for="">Password</label>
+            <input type="text"  name="txtpassword"  [(ngModel)]="user.password" ngModel class="form-control" required>
+        </div>
+        <div>
+            <label for="">Confirm Password</label>
+            <input type="text"  name="txtpassword"  [(ngModel)]="user.password" ngModel class="form-control" required>
+        </div>
+    </div>
+        <div>
+            <label for="">Phone</label>
+            <input type="tel"  name="txtphone" pattern="^\d{11}" #phone="ngModel" [(ngModel)]="user.phone" class="form-control" required [class.is-invalid]="phone.invalid && phone.touched">
+        <div *ngIf="phone.errors&&phone.touched">
+            <small class="text-danger" *ngIf="phone.errors['pattern']">the phone number must be  at least 11 digit</small>
+            <small class="text-danger" *ngIf="phone.errors['required']"> phone is required</small>
+        </div>
+        </div>
+            <label for="">where you hear about us</label>
+            <div class="form-group">
+                <select name="" id="" name="txtselect" [(ngModel)]="user.topic" ngModel class="custom-select">
+                    <option *ngFor="let item of topics">{{item}}</option>
+                </select>
+            </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="chkremember" [(ngModel)]="user.remember" required >
+                    <label for="">remember me</label>
+                </div>
+  <input type="submit" class="btn btn-primary " value="Register" [disabled]="userform.form.invalid">
+
+           
+</form>
+</div>

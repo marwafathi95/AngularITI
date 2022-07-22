@@ -1,0 +1,21 @@
+<div class="container">
+    <form  #userform="ngForm" class="form-group">
+    
+    
+             <div>
+            <label for="">E-mail</label>
+            <input type="email" name="txtmail" #mail="ngModel" [(ngModel)]="user.mail" pattern="\w+@\w+.(com.eg|net.eg|edu.eg|org.eg|.eg)$" class="form-control" required [class.is-invalid]="mail.invalid && mail.touched">
+            <small class="text-danger" *ngIf="mail.invalid && mail.touched">Email must have @ and .com</small>
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="text"  name="txtpassword"  [(ngModel)]="user.password" ngModel class="form-control" required>
+            </div>
+            <br>
+            <div>
+                <input type="submit" class="btn btn-success" value="Login" [disabled]="userform.form.invalid">
+            </div>
+           
+     </form>
+     <div class="d-flex flex-column min-vh-100" ></div>
+     </div>
